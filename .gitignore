@@ -1,3 +1,6 @@
 .htaccess
 wp-config.php
+wp-snapshots/*
+old.git/*
 wp-content/mmr/*
+.DS_Store
