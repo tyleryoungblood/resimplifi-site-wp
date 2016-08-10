@@ -1,6 +1,6 @@
 var mergefields =
 [ //############################################################################
-  {"label":"header",        "value":"BUyer"},
+  {"label":"header",        "value":"BUYER"},
   //############################################################################
 
     {"label":"subheader",                         "value":"Agency Representation"},
