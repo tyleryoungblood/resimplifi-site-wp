@@ -1,4 +1,2 @@
 .htaccess
 wp-config.php
-wp-snapshots/*
-old.git/*
