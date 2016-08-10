@@ -1,6 +1,10 @@
 .htaccess
+.htaccess.orig
 wp-config.php
 wp-snapshots/*
 old.git/*
-wp-content/mmr/*
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
 .DS_Store
