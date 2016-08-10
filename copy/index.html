@@ -28,8 +28,7 @@
     <!-- prevent search engines from indexing page by requiring a password if
          accessing from a location other than localhost:8888 -->
     <script>
-    if(window.location.host != 'localhost:8888') {
-      alert('localhost');
+    if(window.location.host != 'localhost:8888' && window.location.host != 'b35.b67.myftpupload.com') {
       var passEntered = prompt('Please enter password:');
 
       // NOTE: this is not secure. Anyone can view source and see password
