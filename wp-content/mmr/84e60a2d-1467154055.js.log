@@ -1,0 +1,7 @@
+2016-07-07T18:24:59+00:00 - MERGED:
+ - jquery-core - /wp-includes/js/jquery/jquery.js
+ - jquery-migrate - /wp-includes/js/jquery/jquery-migrate.min.js - unminified version used
+2016-07-07T18:25:04+00:00 - COMPRESSING WITH MINIFY (PHP exec not available)
+2016-07-07T18:25:04+00:00 - COMPRESSING WITH MINIFY (PHP exec not available)
+2016-07-07T18:25:05+00:00 - COMPRESSION COMPLETE - 9.08K saved
+2016-07-07T18:25:05+00:00 - COMPRESSION COMPLETE - 9.08K saved

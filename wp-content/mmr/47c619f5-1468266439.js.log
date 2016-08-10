@@ -1,0 +1,11 @@
+2016-07-12T16:03:50+00:00 - MERGED:
+ - t_vendor_footer - http://b35.b67.myftpupload.com/wp-content/themes/stratus/assets/js/vendor/vendor_footer.js
+ - roots_main - http://b35.b67.myftpupload.com/wp-content/themes/stratus/assets/js/main.js
+ - headhesive - http://b35.b67.myftpupload.com/wp-content/themes/stratus/assets/js/vendor/headhesive.min.js
+ - nicescroll - http://b35.b67.myftpupload.com/wp-content/themes/stratus/assets/js/vendor/jquery.nicescroll.min.js
+ - wp-embed - /wp-includes/js/wp-embed.min.js - unminified version used
+ - formidable - http://b35.b67.myftpupload.com/wp-content/plugins/formidable/js/formidable.min.js - unminified version used
+2016-07-12T16:04:22+00:00 - COMPRESSING WITH MINIFY (PHP exec not available)
+2016-07-12T16:04:23+00:00 - COMPRESSING WITH MINIFY (PHP exec not available)
+2016-07-12T16:04:24+00:00 - COMPRESSION COMPLETE - 61.36K saved
+2016-07-12T16:04:25+00:00 - COMPRESSION COMPLETE - 61.36K saved
