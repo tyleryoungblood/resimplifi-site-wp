@@ -259,8 +259,6 @@ var mergefields =
       {'label':'Lease Expiration',        'value':'Lease Expiration Date'},
       {'label':'Option to Renew',         'value':'Option to Renew'},
       {'label':'Option to Terminate',     'value':'Option to Terminate'},
-      {'label':'Option to Expand',        'value':'Option to Expand'},
-      {'label':'Right of First Refusal',  'value':'Right of First Refusal'},
       {'label':'Due Diligence',           'value':'Due Diligence Period Expiration Date'},
       {'label':'text',                    'value': '<code>|date_format\:"F j, Y"</code> produces March 1, 2016.'},
       {'label':'text',                    'value': '<code>|date_format\:"m/d/Y"</code> produces 03/01/2016.'},
