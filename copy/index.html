@@ -102,15 +102,20 @@
       } else {
         // same as above, but these won't have parens to remove
         id = mergefields[i].value.split('|')[0]
-        id = id.split(' ').join('').split(':').join('').split('(').join('').split(')').join('').split('/').join('_');
+        id = id.replace(/[ :()]/g,"").replace(/[/]/g,"_")
 
-        // add required "{$ }" to beginning and end of merge field, and replace spaces with _
+        //if there is a format paramater (like |number_format:2) take the beginning (without the format info)
         webmergeField_beginning = mergefields[i].value.split('|')[0];
-        webmergeField_beginning = webmergeField_beginning.split(' ').join('_').split('(').join('').split(')').join('').split(':').join('').split('/').join('_');
+        //replace spaces and forward slashes with underscores
+        webmergeField_beginning = webmergeField_beginning.replace(/[ /]/g, "_");
+        //remove parens and colons.
+        webmergeField_beginning = webmergeField_beginning.replace(/[():]/g, "");
+        //grab any formatting parameters from the end of the webmerge fields
         webmergeField_end = mergefields[i].value.split('|')[1];
 
         if(webmergeField_end) {
           webmergeField_end = webmergeField_end.split('"').join("'"); //swap double quotes in mergefields.js's date_format:"f j, y" for single quotes so it doesn't prematurely end a starting double quote
+          // add required "{$ }" to beginning and end of merge field after concatenating any data formatting info
           webmergeField = "{$" + webmergeField_beginning + "|" + webmergeField_end + "}";
         } else {
           webmergeField = "{$" + webmergeField_beginning + "}";
