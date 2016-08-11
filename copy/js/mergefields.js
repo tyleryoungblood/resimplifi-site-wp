@@ -142,9 +142,9 @@ var mergefields =
       {'label':'Account Name',    'value':'Buyer Account: Account Name'},
       {'label':'Street Address',  'value':'Buyer Account: Billing Street'},
       {'label':'City',            'value':'Buyer Account: Billing City'},
-      {'label':'State',           'value':'Buyer Account: Billing StateState Province'},
+      {'label':'State',           'value':'Buyer Account: Billing State Province'},
       {'label':'Zipcode',         'value':'Buyer Account: Billing Zip Postal Code'},
-      {'label':'Country',         'value':'Buyer Account: Country'},
+      {'label':'Country',         'value':'Buyer Account: Billing Country'},
 
     {'label':'subheader',         'value':'Buyer Contact (Primary)'},
       {'label':'Full Name',       'value':'Primary Buyer Contact: Full Name'},
@@ -153,7 +153,7 @@ var mergefields =
       {'label':'Title',           'value':'Primary Buyer Contact: Title'},
       {'label':'Department',      'value':'Primary Buyer Contact: Department'},
       {'label':'Email',           'value':'Primary Buyer Contact: Email'},
-      {'label':'Fax',             'value':'Primary Buyer Contact: Fax'},
+      {'label':'Fax',             'value':'Primary Buyer Contact: Business Fax'},
       {'label':'Phone',           'value':'Primary Buyer Contact: Business Phone'},
       {'label':'Mobile Phone',    'value':'Primary Buyer Contact: Mobile Phone'},
 
@@ -163,7 +163,7 @@ var mergefields =
       {'label':'City',            'value':'Seller Account: Billing City'},
       {'label':'State',           'value':'Seller Account: Billing State Province'},
       {'label':'Zipcode',         'value':'Seller Account: Billing Zip Postal Code'},
-      {'label':'Country',         'value':'Seller Account: Country'},
+      {'label':'Country',         'value':'Seller Account: Billing Country'},
 
     {'label':'subheader',     'value':'Seller Contact (Primary)'},
       {'label':'Full Name',       'value':'Primary Seller Contact: Full Name'},
@@ -172,7 +172,7 @@ var mergefields =
       {'label':'Title',           'value':'Primary Seller Contact: Title'},
       {'label':'Department',      'value':'Primary Seller Contact: Department'},
       {'label':'Email',           'value':'Primary Seller Contact: Email'},
-      {'label':'Fax',             'value':'Primary Seller Contact: Fax'},
+      {'label':'Fax',             'value':'Primary Seller Contact: Business Fax'},
       {'label':'Phone',           'value':'Primary Seller Contact: Business Phone'},
       {'label':'Mobile Phone',    'value':'Primary Seller Contact: Mobile Phone'},
 
@@ -182,7 +182,7 @@ var mergefields =
       {'label':'City',            'value':'Landlord Account: Billing City'},
       {'label':'State',           'value':'Landlord Account: Billing State Province'},
       {'label':'Zipcode',         'value':'Landlord Account: Billing Zip Postal Code'},
-      {'label':'Country',         'value':'Landlord Account: Country'},
+      {'label':'Country',         'value':'Landlord Account: Billing Country'},
 
     {'label':'subheader',     'value':'Landlord Contact (Primary)'},
       {'label':'Full Name',       'value':'Primary Landlord Contact: Full Name'},
@@ -191,7 +191,7 @@ var mergefields =
       {'label':'Title',           'value':'Primary Landlord Contact: Title'},
       {'label':'Department',      'value':'Primary Landlord Contact: Department'},
       {'label':'Email',           'value':'Primary Landlord Contact: Email'},
-      {'label':'Fax',             'value':'Primary Landlord Contact: Fax'},
+      {'label':'Fax',             'value':'Primary Landlord Contact: Business Fax'},
       {'label':'Phone',           'value':'Primary Landlord Contact: Business Phone'},
       {'label':'Mobile Phone',    'value':'Primary Landlord Contact: Mobile Phone'},
 
@@ -201,7 +201,7 @@ var mergefields =
       {'label':'City',            'value':'Tenant Account: Billing City'},
       {'label':'State',           'value':'Tenant Account: Billing State Province'},
       {'label':'Zipcode',         'value':'Tenant Account: Billing Zip Postal Code'},
-      {'label':'Country',         'value':'Tenant Account: Country'},
+      {'label':'Country',         'value':'Tenant Account: Billing Country'},
 
     {'label':'subheader',     'value':'Tenant Contact (Primary)'},
       {'label':'Full Name',       'value':'Primary Tenant Contact: Full Name'},
@@ -210,7 +210,7 @@ var mergefields =
       {'label':'Title',           'value':'Primary Tenant Contact: Title'},
       {'label':'Department',      'value':'Primary Tenant Contact: Department'},
       {'label':'Email',           'value':'Primary Tenant Contact: Email'},
-      {'label':'Fax',             'value':'Primary Tenant Contact: Fax'},
+      {'label':'Fax',             'value':'Primary Tenant Contact: Business Fax'},
       {'label':'Phone',           'value':'Primary Tenant Contact: Business Phone'},
       {'label':'Mobile Phone',    'value':'Primary Tenant Contact: Mobile Phone'},
 
@@ -220,7 +220,7 @@ var mergefields =
       {'label':'City',            'value':'Co-Broker Account: Billing City'},
       {'label':'State',           'value':'Co-Broker Account: Billing State Province'},
       {'label':'Zipcode',         'value':'Co-Broker Account: Billing Zip Postal Code'},
-      {'label':'Country',         'value':'Co-Broker Account: Country'},
+      {'label':'Country',         'value':'Co-Broker Account: Billing Country'},
 
     {'label':'subheader',     'value':'Co-Broker Contact (Primary)'},
       {'label':'Full Name',       'value':'Co-Broker Contact: Full Name'},
@@ -229,7 +229,7 @@ var mergefields =
       {'label':'Title',           'value':'Co-Broker Contact: Title'},
       {'label':'Department',      'value':'Co-Broker Contact: Department'},
       {'label':'Email',           'value':'Co-Broker Contact: Email'},
-      {'label':'Fax',             'value':'Co-Broker Contact: Fax'},
+      {'label':'Fax',             'value':'Co-Broker Contact: Business Fax'},
       {'label':'Phone',           'value':'Co-Broker Contact: Business Phone'},
       {'label':'Mobile Phone',    'value':'Co-Broker Contact: Mobile Phone'},
 
@@ -252,16 +252,16 @@ var mergefields =
   //############################################################################
 
     {'label':'subheader',                 'value':'Date Formats'},
-      {'label':'Listing Commencement',    'value':'Listing Commencement Date|date_format:"F j, Y"'},
-      {'label':'Listing Expiration',      'value':'Listing Expiration Date|date_format:"F j, Y"'},
-      {'label':'Create Date',             'value':'Create Date|date_format:"F j, Y"'},
-      {'label':'Lease Commencement',      'value':'Lease Commencement'},
-      {'label':'Lease Expiration',        'value':'Lease Expiration'},
+      {'label':'Listing Commencement',    'value':'Listing Agreement Commencement Date|date_format:"F j, Y"'},
+      {'label':'Listing Expiration',      'value':'Listing Agreement Expiration Date|date_format:"F j, Y"'},
+      {'label':'Create Date',             'value':'Created By Created Date|date_format:"F j, Y"'},
+      {'label':'Lease Commencement',      'value':'Lease Commencement Date'},
+      {'label':'Lease Expiration',        'value':'Lease Expiration Date'},
       {'label':'Option to Renew',         'value':'Option to Renew'},
       {'label':'Option to Terminate',     'value':'Option to Terminate'},
       {'label':'Option to Expand',        'value':'Option to Expand'},
       {'label':'Right of First Refusal',  'value':'Right of First Refusal'},
-      {'label':'Due Diligence',           'value':'Due Diligence'},
+      {'label':'Due Diligence',           'value':'Due Diligence Period Expiration Date'},
       {'label':'text',                    'value': '<code>|date_format\:"F j, Y"</code> produces March 1, 2016.'},
       {'label':'text',                    'value': '<code>|date_format\:"m/d/Y"</code> produces 03/01/2016.'},
 

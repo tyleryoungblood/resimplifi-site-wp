@@ -13,7 +13,7 @@ for(i = 0; i < dropdowns.length; i++) {
   // grab the corresponding webmerge field that matches current dropdown
   // replace underscores with spaces, 1's with slashes, and 8's with colons
   // spaces, slashes, and colons are invalid in webmerge fields
-  webmergefield = webmergeFields[i].innerHTML.replace(/_/g, " ").replace(/1/g, " ").replace(/8/g, "");
+  webmergefield = webmergeFields[i].innerHTML.replace(/[_1()]/g, " ").replace(/8/g, "");
 
   // click on the dropdown to expose options
   dropdowns[i].click();
@@ -25,7 +25,7 @@ for(i = 0; i < dropdowns.length; i++) {
 
   for(j = 0; j < options.length; j++) {
 
-    if(options[j].innerHTML.replace(/:/g, "").replace(/\//g, " ") == webmergefield) {
+    if(options[j].innerHTML.replace(/[_1/]/g, " ").replace(/[():8]/g, "") == webmergefield) {
       // click on the first option that matches the webmerge field, then
       options[j].click();
       break; // don't continue looping
