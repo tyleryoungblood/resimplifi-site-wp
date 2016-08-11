@@ -77,7 +77,8 @@
         if(i !== 0) tabContent += '</div>';
 
         // I'm regex averse ... remove all spaces, colons, and parens ... the hard way
-        id = mergefields[i].value.split(' ').join('').split(':').join('').split('(').join('').split(')').join('');
+        id = mergefields[i].value.split('|')[0] // if the mergefield has a format parameter, split and take the stuff before the pipe
+        id = id.split(' ').join('').split(':').join('').split('(').join('').split(')').join('');
 
         // Create a new tab using the value of the object labeled "header"
 
@@ -100,11 +101,22 @@
 
       } else {
         // same as above, but these won't have parens to remove
-        id = mergefields[i].value.split(' ').join('').split(':').join('').split('(').join('').split(')').join('').split('/').join('');
+        id = mergefields[i].value.split('|')[0]
+        id = id.split(' ').join('').split(':').join('').split('(').join('').split(')').join('').split('/').join('');
 
         // add required "{$ }" to beginning and end of merge field, and replace spaces with _
-        webmergeField = "{$" + mergefields[i].value.split(' ').join('_').split('(').join('').split(')').join('').split(':').join('8').split('/').join('') + "}";
-        webmergeField = webmergeField.split('|date_format8mdY').join('|date_format:\"m/d/Y\"'); //fix date filter so it doesn't have the colon replaced with an 8 or the quotes removed.
+        webmergeField_beginning = mergefields[i].value.split('|')[0];
+        webmergeField_beginning = webmergeField_beginning.split(' ').join('_').split('(').join('').split(')').join('').split(':').join('');
+        webmergeField_end = mergefields[i].value.split('|')[1];
+
+        if(webmergeField_end) {
+          webmergeField_end = webmergeField_end.split('"').join("'"); //swap double quotes in mergefields.js's date_format:"f j, y" for single quotes so it doesn't prematurely end a starting double quote
+          webmergeField = "{$" + webmergeField_beginning + "|" + webmergeField_end + "}";
+        } else {
+          webmergeField = "{$" + webmergeField_beginning + "}";
+        }
+
+        //webmergeField = webmergeField.split('|date_format8mdY').join('|date_format:\"m/d/Y\"'); //fix date filter so it doesn't have the colon replaced with an 8 or the quotes removed.
 
 
         //create visible label, textbox, and copy button for each merge field
