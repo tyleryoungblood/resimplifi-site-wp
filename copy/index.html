@@ -78,7 +78,7 @@
 
         // I'm regex averse ... remove all spaces, colons, and parens ... the hard way
         id = mergefields[i].value.split('|')[0] // if the mergefield has a format parameter, split and take the stuff before the pipe
-        id = id.split(' ').join('').split(':').join('').split('(').join('').split(')').join('');
+        id = id.split(' ').join('').split(':').join('').split('(').join('').split(')').join('').split('/').join('_');
 
         // Create a new tab using the value of the object labeled "header"
 
@@ -102,11 +102,11 @@
       } else {
         // same as above, but these won't have parens to remove
         id = mergefields[i].value.split('|')[0]
-        id = id.split(' ').join('').split(':').join('').split('(').join('').split(')').join('').split('/').join('');
+        id = id.split(' ').join('').split(':').join('').split('(').join('').split(')').join('').split('/').join('_');
 
         // add required "{$ }" to beginning and end of merge field, and replace spaces with _
         webmergeField_beginning = mergefields[i].value.split('|')[0];
-        webmergeField_beginning = webmergeField_beginning.split(' ').join('_').split('(').join('').split(')').join('').split(':').join('');
+        webmergeField_beginning = webmergeField_beginning.split(' ').join('_').split('(').join('').split(')').join('').split(':').join('').split('/').join('_');
         webmergeField_end = mergefields[i].value.split('|')[1];
 
         if(webmergeField_end) {
