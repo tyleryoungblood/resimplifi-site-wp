@@ -4,7 +4,7 @@ Contributors:launchinteractive
 Tags: merge, concatenate, minify, yuicompressor, closure, refresh
 Requires at least: 3.6.1
 Stable tag: trunk
-Tested up to: 4.5
+Tested up to: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,11 @@ Minification by [Minify](https://github.com/matthiasmullie/minify) and [Google C
 
 In order to ensure fast loading times its recommended to set long expiry dates for CSS and JS as well as make sure gzip or deflate is on.
 
-Version 1.6 adds support for HTTP2 Server Push to further speed up your requests (thanks to [Daniel Aleksandersen](https://www.slightfuture.com)).
+Version 1.6 added support for HTTP2 Server Push to further speed up your requests (thanks to [Daniel Aleksandersen](https://www.slightfuture.com)).
+
+Version 1.6.9 added the ability to specify the cache directory. Set MMR_CACHE_DIR & MMR_CACHE_URL constants in wp-config.php. MMR_CACHE_DIR must be full server path and MMR_CACHE_URL must be absolute URL for this to work correctly (thanks to [Daniel Aleksandersen](https://www.slightfuture.com)).
+
+Version 1.6.11 added the ability to specify seperate cache urls for javascript and CSS. Use MMR_JS_CACHE_URL & MMR_CSS_CACHE_URL to replace MMR_CACHE_URL. 
 
 **Note** Installing this plugin on a server with the eAccellerator module installed has the potential to break as Minify uses anonymous functions which return NULL. [View eAccellerator Issue Thread](https://github.com/eaccelerator/eaccelerator/issues/12)
 
@@ -42,6 +46,7 @@ Version 1.6 adds support for HTTP2 Server Push to further speed up your requests
 *	Ability to turn off concatination
 *	Ability to manually ignore scripts or css
 *	Ignores conditional scripts and styles
+*	Ability to specify cache directories
 
 == Installation ==
 
@@ -49,6 +54,17 @@ Version 1.6 adds support for HTTP2 Server Push to further speed up your requests
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 1.6.11 =
+* Ability to seperate cache urls for javascript and CSS (MMR_JS_CACHE_URL & MMR_CSS_CACHE_URL)
+
+= 1.6.10 =
+* Fix concatenation bug (thanks fhoech)
+
+= 1.6.9 =
+* Better support for CSS output to the page. This should fix some themes that break.
+* Ability to specify cache directory added. Thanks to Daniel Aleksandersen for help with this. 
+* Minor code cleanup
 
 = 1.6.8 =
 * Fix External Styles/Scripts ordering
