@@ -125,6 +125,18 @@ var mergefields =
       {'label':'Commission to be paid by',                'value':'Commission To Be Paid By'},
       {'label':'Commission Notes',                        'value':'Commission Notes'},
 
+    {'label':'subheader',                                 'value':'Residual Commission Details'},
+      {'label':'Gross Residual Commission Dollars',        'value':'Gross Residual Commission Dollars'},
+      {'label':'Gross Residual Commission Percent',        'value':'Gross Residual Commission Percent'},
+      {'label':'Company Residual Commission Dollars',      'value':'Company Residual Commission Dollars'},
+      {'label':'Company Residual Commission Percent',      'value':'Company Residual Commission Percent'},
+      {'label':'Co-Broker Residual Commission Dollars',   'value':'Co Broker Residual Commission Dollars'},
+      {'label':'Co-Broker Residual Commission Percent',    'value':'Co Broker Residual Commission Percent'},
+      {'label':'Residual Commission First Mo Dollars',     'value':'Residual Commission First Mo Dollars'},
+      {'label':'Residual Commission First Mo Percent',     'value':'Residual Commission First Mo Percent'},
+      {'label':'Residual Commission Remaining Mo Dollars', 'value':'Residual Commission Remaining Mo Dollars'},
+      {'label':'Residual Commission Remaining Mo Percent', 'value':'Residual Commission Remaining Mo Percent'},
+
     {'label':'subheader',                     'value':'LeaseTransaction Info'},
       {'label':'Lease Commencement Date',     'value':'Lease Commencement Date|date_format:"F j, Y"'},
       {'label':'Lease Expiration Date',       'value':'Lease Expiration Date|date_format:"F j, Y"'},
